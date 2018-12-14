@@ -91,6 +91,9 @@ const Path = require('path'),
       rules: sharedRules
     },
     plugins: [
+      new CopyWebpackPlugin([
+        {from:'src/assets/img', to:'assets/img'}
+      ]),
       new Webpack.DefinePlugin({
         __isBrowser__: "false",
         'process.env': {

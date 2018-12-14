@@ -10,6 +10,8 @@ import Navbar from './components/Navbar'
 import { Routes } from './routes'
 import NotFound from './pages/NotFound'
 
+// Hello
+
 class App extends Component {
 
   constructor(props) {
@@ -33,10 +35,12 @@ class App extends Component {
       <div>
         <Navbar {...this.props} />
         <Switch>
+          // Attempt to find a matching Route
           {Routes.map(({ path, exact, component: C, isPrivate = false, ...rest}) => {
             return <Route key={path} path={path} exact
               render={props => (<C {...props} {...rest} {...this.props} />)} />
           })}
+          // If not route is returned above, this executes
           <Route render={props => (<NotFound {...props} />)} />
         </Switch>
       </div>
@@ -51,6 +55,7 @@ App.propTypes = {
 }
 
 const mapStateToProps = state => ({
+    // Top Level State to control 2nd level components
     account: state.account,
     apps: state.apps
   }),

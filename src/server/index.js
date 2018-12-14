@@ -168,18 +168,6 @@ async function start() {
         }
       },
       {
-        method: 'GET',
-        path: '/media/{param*}',
-        options: {
-          auth: false,
-          handler: {
-            directory: {
-              path: 'media'
-            }
-          },
-        }
-      },
-      {
         method:'GET',
         path:'/',
         options: {

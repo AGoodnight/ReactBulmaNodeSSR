@@ -7,10 +7,9 @@ const accountReducer = (state = initialState.account, action) => {
   switch (action.type) {
 
     case constants.ACTIONS.LOGIN.SUCCESS: {
-
-      const account = {...action.data}
-
-      return account
+      return Object.assign({},state,{
+        ...action.data
+      })
     }
 
     default:

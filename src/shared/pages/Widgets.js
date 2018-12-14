@@ -13,7 +13,6 @@ class Widgets extends Component {
       widgets = window.__INITIAL_DATA__
       delete window.__INITIAL_DATA__
     } else {
-
       widgets = props.staticContext
     }
 

@@ -4,7 +4,7 @@
       "publisher": "Netflix, Inc",
       "price": "Free",
       "img":{
-        "src": "media/netflix.jpg",
+        "src": "assets/img/netflix.jpg",
         "alt": "netflix app icon"
       },
       "desc": "<p>Watch TV shows and movies recommended just for you, including award-winning Netflix original series, movies, and documentaries.</p><p>Netflix has something for everyone. </p>",
@@ -16,7 +16,7 @@
       "publisher": "Pandora Media, Inc",
       "price": "Free",
       "img":{
-        "src": "media/pandora.jpg",
+        "src": "assets/img/pandora.jpg",
         "alt": "pandora icon"
       },
       "desc": "<p>Pandora gives you a personalized music experience that continually evolves with your tastes.</p><p>Create stations from your favorite songs, artists or genres. Or search browse to find recommended stations for your mood or activity.</p>",
@@ -27,7 +27,7 @@
       "publisher": "Hulu, LLC",
       "price": "Free",
       "img":{
-        "src": "media/hulu.jpg",
+        "src": "assets/img/hulu.jpg",
         "alt": "hulu icon"
       },
       "desc": "<p>Enjoy all your TV in one place with a new Hulu experience – more personalized and intuitive than ever before.</p><p> The choice is yours - select a plan featuring Hulu’s entire streaming library, or if you’ve subscribed through Hulu to a plan that includes Live TV</p>",
@@ -39,7 +39,7 @@
      "publisher": "Supercell",
      "price": "Free",
      "img":{
-       "src": "media/coc.jpg",
+       "src": "assets/img/coc.jpg",
        "alt": "coc icon"
      },
      "desc": "<p>Join millions of players worldwide as you build your village, raise a clan, and compete in epic Clan Wars!</p><p>Mustachioed Barbarians, fire wielding Wizards, and other unique troops are waiting for you! Enter the world of Clash!</p>",
@@ -50,7 +50,7 @@
      "publisher": "Marvel",
      "price": "Free",
      "img":{
-       "src": "media/mcc.jpg",
+       "src": "assets/img/mcc.jpg",
        "alt": "mcc icon"
      },
      "desc": "<p>Prepare for epic versus-fighting action with your favorite Marvel Super Heroes & Super Villains in the ultimate cosmic showdown! Spider-Man, Iron Man, Wolverine & more await your summons to battle! Assemble a team & begin your quest to become the Ultimate Marvel Champion!</p>",
@@ -61,7 +61,7 @@
      "publisher": "King",
      "price": "Free",
      "img":{
-       "src": "media/ccs.jpg",
+       "src": "assets/img/ccs.jpg",
        "alt": "Candy Crush Saga icon"
      },
      "desc": "<p>Start playing Candy Crush Saga today - loved by millions of players around the world.</p><p>With over a trillion levels played, this match 3 puzzle game is one of the most popular mobile games of all time!</p>",
