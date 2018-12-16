@@ -7,12 +7,17 @@ class TextInput extends Component {
     const { name, onChange, placeholder, value } = this.props
 
     return (
-      <input className='text-input'
-        name={name}
-        onChange={onChange}
-        placeholder={placeholder}
-        type='text'
-        value={value} />
+      <div className='field'>
+        <label className='label'>{name}</label>
+        <div className='control'>
+          <input className='input'
+            name={name}
+            onChange={onChange}
+            placeholder={placeholder}
+            type='text'
+            value={value} />
+        </div>
+      </div>
     )
   }
 }

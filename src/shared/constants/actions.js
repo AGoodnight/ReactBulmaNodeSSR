@@ -1,5 +1,5 @@
 
-const Constants = {
+const ActionDictionary = {
   ACTIONS: {
     LOGIN: {
       SUCCESS: 'LOGIN_SUCCESS'
@@ -21,4 +21,4 @@ const Constants = {
   }
 }
 
-export { Constants }
+export { ActionDictionary }

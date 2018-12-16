@@ -1,4 +1,4 @@
-import { Constants as constants } from '../constants/index'
+import { ActionDictionary as constants } from '../constants/actions'
 import initialState from './initialState'
 
 const appsReducer = ( state = initialState.apps, action) => {

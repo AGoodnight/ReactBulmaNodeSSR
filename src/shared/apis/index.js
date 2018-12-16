@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import { Constants as constants } from '../constants/index'
+import { ActionDictionary as constants } from '../constants/actions'
 
 class Api {
 

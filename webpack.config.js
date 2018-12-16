@@ -29,23 +29,23 @@ const Path = require('path'),
       test: /\.scss$/,
       use: [
         {
-					loader: 'file-loader',
-					options: {
-						name: 'assets/[name].css',
-					}
-				},
-				{
-					loader: 'extract-loader'
-				},
-				{
-					loader: 'css-loader?-url'
-				},
-				{
-					loader: 'postcss-loader'
-				},
-				{
-					loader: 'sass-loader'
-				}
+          loader: 'file-loader',
+          options: {
+          name: 'assets/[name].css',
+        }
+        },
+        {
+          loader: 'extract-loader'
+        },
+        {
+          loader: 'css-loader?-url'
+        },
+        {
+          loader: 'postcss-loader'
+        },
+        {
+          loader: 'sass-loader'
+        }
       ]
     }
   ],

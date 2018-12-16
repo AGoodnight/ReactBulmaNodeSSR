@@ -199,7 +199,21 @@ async function start() {
         method:'GET',
         path:'/account',
         options: {
-          auth: false,
+          auth: {mode:'required'},
+          pre: [
+            { method: pre1, assign: 'm1' }
+          ],
+          handler: async(request,h) => {
+            const res = await request.pre.m1
+            return h.response(res)
+          }
+        }
+      },
+      {
+        method:'GET',
+        path:'/widgets',
+        options: {
+          auth: {mode:'required'},
           pre: [
             { method: pre1, assign: 'm1' }
           ],

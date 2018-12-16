@@ -64,3 +64,12 @@ a.btn:hover{
 .button, .icon-inline, caption, td, th {
     vertical-align: middle;
 }
+
+// home
+.home-hero{
+  min-height:240px;
+  background-image: url('./img/building.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

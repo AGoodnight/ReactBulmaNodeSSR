@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import { NavigationStructure as navStructure } from '../constants/navigation'
 
 class Navbar extends Component {
   constructor(props) {
@@ -35,21 +36,10 @@ class Navbar extends Component {
   render() {
     const { account, actions } = this.props,
       accountIsInSession = Object.keys(account).length !== 0,
-      links = [
-          {
-            exact: true,
-            name: 'Home',
-            path: '/'
-          },
-          {
-            name: 'Widgets',
-            path: '/widgets',
-          },
-          {
-            name: 'Account',
-            path: '/account',
-          }
-        ]
+      links = [];
+      for( let navItem in navStructure.ITEMS ){
+        links.push(navStructure.ITEMS[navItem])
+      }
 
     return (
       <nav className='navbar' role='navigation' aria-label="main navigation">
@@ -74,18 +64,28 @@ class Navbar extends Component {
         </div>
         <div className ='navbar-menu' id='navMenu'>
           <div className ='navbar-start'>
-            {links.map(({ exact, name, path }) => (
-              <NavLink exact key={path} className="navbar-item" activeStyle={{fontWeight: 'bold'}} to={`${path}`}>
-                {name}
-              </NavLink>
-            ))}
+            {links.map(({ exact, name, path, isPrivate }) => {
+              if(isPrivate){
+                if(accountIsInSession){
+                  return <NavLink exact key={path} className="navbar-item" activeStyle={{fontWeight: 'bold'}} to={`${path}`}>
+                    {name}
+                  </NavLink>
+                }else{
+                  return null
+                }
+              }else{
+                return <NavLink exact key={path} className="navbar-item" activeStyle={{fontWeight: 'bold'}} to={`${path}`}>
+                  {name}
+                </NavLink>
+              }
+            })}
           </div>
           <div className='navbar-end'>
             <div className='navbar-item'>
                 <div className='buttons'>
                   {!accountIsInSession
-                    ? <NavLink className='button is-primary' activeStyle={{fontWeight: 'bold'}} to='/login'>Login</NavLink>
-                    : <a href="" className='button' onClick={actions.logout}>Logout</a>
+                    ? <NavLink className='button is-primary is-rounded' activeStyle={{fontWeight: 'bold'}} to='/login'>Login</NavLink>
+                    : <a href="" className='button is-rounded' onClick={actions.logout}>Logout</a>
                   }
                 </div>
             </div>

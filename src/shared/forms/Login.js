@@ -10,7 +10,7 @@ class LoginForm extends Component {
 
     this.state = {
       form: {
-        email: ''
+        email: 'bulma@capsulecorp.com'
       }
     }
 
@@ -41,12 +41,12 @@ class LoginForm extends Component {
     return (
       <form>
         <TextInput
-          name='email'
+          name='Email Address'
           onChange={this.handleOnChange}
-          placeholder='email'
+          placeholder='Your Email'
           value={this.state.form.email} />
         <br/><br/>
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button className='button is-link is-rounded' onClick={this.handleSubmit}>Submit</button>
       </form>
     )
   }

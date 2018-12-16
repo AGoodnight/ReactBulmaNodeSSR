@@ -16,9 +16,15 @@ class Login extends Component {
     if (accountIsInSession) return <Redirect to='/account' />
 
     return (
-      <div>
-        Login
-        <LoginForm {...this.props} />
+      <div className='container'>
+        <section className='section'>
+          <div className='columns'>
+            <div className='column'>
+              <p className='title is-2'>Login</p>
+              <LoginForm {...this.props} />
+            </div>
+          </div>
+        </section>
       </div>
     )
   }

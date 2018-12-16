@@ -1,5 +1,5 @@
 import { Api as api } from '../apis/index'
-import { Constants as constants } from '../constants/index'
+import { ActionDictionary as constants } from '../constants/actions'
 
 const success = (data) => ({
   type: constants.ACTIONS.LOGIN.SUCCESS, data

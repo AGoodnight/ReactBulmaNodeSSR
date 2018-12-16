@@ -20,6 +20,7 @@ class App extends Component {
 
     const { account, apps } = props
 
+
     this.state = {
       accountIsInSession: Object.keys(account).length !== 0,
       account: account,

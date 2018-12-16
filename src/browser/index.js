@@ -7,7 +7,11 @@ import configureStore from '../shared/store/configureStore'
 import { getAccount } from '../shared/actions/index'
 import App from '../shared/App'
 
+// const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
 const store = configureStore()
+// store.subscribe(()=>{
+//   localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+// })
 
 store.dispatch(getAccount())
 

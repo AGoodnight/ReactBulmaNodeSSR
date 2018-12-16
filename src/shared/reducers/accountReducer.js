@@ -1,5 +1,5 @@
 // https://redux.js.org/docs/recipes/reducers/ImmutableUpdatePatterns.html
-import { Constants as constants } from '../constants/index'
+import { ActionDictionary as constants } from '../constants/actions'
 import initialState from './initialState'
 
 const accountReducer = (state = initialState.account, action) => {

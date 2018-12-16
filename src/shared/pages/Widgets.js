@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import Card from '../components/card'
 
 class Widgets extends Component {
@@ -29,6 +30,7 @@ class Widgets extends Component {
     const { loading, widgets } = this.state
 
     if (loading) {
+
       this.fetchWidgets()
     }
   }
@@ -46,19 +48,31 @@ class Widgets extends Component {
   }
 
   render() {
+
+    // const account = { ...this.props.account },
+    //   accountIsInSession = Object.keys(account).length !== 0
+    //
+    // if (!accountIsInSession) return <Redirect to='/login' />
+
     let totalWidgets = 0;
     const { loading, widgets } = this.state
-    console.log(this.state)
 
     if (loading === true) {
       return (<p>'Loading...'</p>)
     }else{
       totalWidgets = widgets.data.length
+
       return (
-        <div>
-          {loading && totalWidgets === 0 && <h2>Loading...</h2>}
-          {!loading && totalWidgets === 0 && <h2>Empty.</h2>}
-          <Card apps={widgets.data} totalapps={totalWidgets} />
+        <div className='container'>
+          <section className='section'>
+            <div className='columns'>
+              <div className='column'>
+                {loading && totalWidgets === 0 && <h2>Loading...</h2>}
+                {!loading && totalWidgets === 0 && <h2>Empty.</h2>}
+                <Card apps={widgets.data} totalapps={totalWidgets} />
+              </div>
+            </div>
+          </section>
         </div>
       )
     }
